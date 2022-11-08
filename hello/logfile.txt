@@ -1,0 +1,68 @@
+SBY 18:15:55 [hello] Removing directory '/home/lunkwill/projects/sva-tests/hello'.
+SBY 18:15:55 [hello] Copy '/home/lunkwill/projects/sva-tests/hello.v' to '/home/lunkwill/projects/sva-tests/hello/src/hello.v'.
+SBY 18:15:55 [hello] engine_0: smtbmc z3
+SBY 18:15:55 [hello] base: starting process "cd hello/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 18:15:56 [hello] base: finished (returncode=0)
+SBY 18:15:56 [hello] prep: starting process "cd hello/model; yosys -ql design_prep.log design_prep.ys"
+SBY 18:15:56 [hello] prep: finished (returncode=0)
+SBY 18:15:56 [hello] smt2: starting process "cd hello/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 18:15:56 [hello] smt2: finished (returncode=0)
+SBY 18:15:56 [hello] engine_0.basecase: starting process "cd hello; yosys-smtbmc -s z3 --presat --noprogress -t 10  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 18:15:56 [hello] engine_0.induction: starting process "cd hello; yosys-smtbmc -s z3 --presat -i --noprogress -t 10  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2"
+SBY 18:15:56 [hello] engine_0.induction: ##   0:00:00  Solver: z3
+SBY 18:15:56 [hello] engine_0.induction: ##   0:00:00  Trying induction in step 10..
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Solver: z3
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY 18:15:56 [hello] engine_0.induction: ##   0:00:00  Trying induction in step 9..
+SBY 18:15:56 [hello] engine_0.induction: ##   0:00:00  Trying induction in step 8..
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY 18:15:56 [hello] engine_0.induction: ##   0:00:00  Trying induction in step 7..
+SBY 18:15:56 [hello] engine_0.induction: ##   0:00:00  Trying induction in step 6..
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Checking assumptions in step 1..
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Checking assertions in step 1..
+SBY 18:15:56 [hello] engine_0.induction: ##   0:00:00  Trying induction in step 5..
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Checking assumptions in step 2..
+SBY 18:15:56 [hello] engine_0.induction: ##   0:00:00  Trying induction in step 4..
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Checking assertions in step 2..
+SBY 18:15:56 [hello] engine_0.induction: ##   0:00:00  Trying induction in step 3..
+SBY 18:15:56 [hello] engine_0.induction: ##   0:00:00  Trying induction in step 2..
+SBY 18:15:56 [hello] engine_0.induction: ##   0:00:00  Trying induction in step 1..
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Checking assumptions in step 3..
+SBY 18:15:56 [hello] engine_0.induction: ##   0:00:00  Trying induction in step 0..
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Checking assertions in step 3..
+SBY 18:15:56 [hello] engine_0.induction: ##   0:00:00  Temporal induction failed!
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Checking assumptions in step 4..
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Checking assertions in step 4..
+SBY 18:15:56 [hello] engine_0.induction: ##   0:00:00  Assert failed in hello: hello.v:11.33-12.31 ($assert$hello.v:11$6)
+SBY 18:15:56 [hello] engine_0.induction: ##   0:00:00  Writing trace to VCD file: engine_0/trace_induct.vcd
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Checking assumptions in step 5..
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Checking assertions in step 5..
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Checking assumptions in step 6..
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Checking assertions in step 6..
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Checking assumptions in step 7..
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Checking assertions in step 7..
+SBY 18:15:56 [hello] engine_0.induction: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace_induct_tb.v
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Checking assumptions in step 8..
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Checking assertions in step 8..
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Checking assumptions in step 9..
+SBY 18:15:56 [hello] engine_0.induction: ##   0:00:00  Writing trace to constraints file: engine_0/trace_induct.smtc
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Checking assertions in step 9..
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  BMC failed!
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Assert failed in hello: hello.v:11.33-12.31 ($assert$hello.v:11$6)
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Writing trace to VCD file: engine_0/trace.vcd
+SBY 18:15:56 [hello] engine_0.induction: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace_induct.yw
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace_tb.v
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Writing trace to constraints file: engine_0/trace.smtc
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace.yw
+SBY 18:15:56 [hello] engine_0.induction: ##   0:00:00  Status: failed
+SBY 18:15:56 [hello] engine_0.basecase: ##   0:00:00  Status: failed
+SBY 18:15:56 [hello] engine_0.induction: finished (returncode=1)
+SBY 18:15:56 [hello] engine_0: Status returned by engine for induction: FAIL
+SBY 18:15:56 [hello] engine_0.basecase: finished (returncode=1)
+SBY 18:15:56 [hello] engine_0: Status returned by engine for basecase: FAIL
+SBY 18:15:56 [hello] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 18:15:56 [hello] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 18:15:56 [hello] summary: engine_0 (smtbmc z3) returned FAIL for induction
+SBY 18:15:56 [hello] summary: engine_0 (smtbmc z3) returned FAIL for basecase
+SBY 18:15:56 [hello] summary: counterexample trace: hello/engine_0/trace.vcd
+SBY 18:15:56 [hello] DONE (FAIL, rc=2)

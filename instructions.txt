@@ -1,0 +1,3 @@
+I need a .v file like orig_hello.v
+and a .sby like hello.sby (currently set up for hello.v)
+$ sby -f hello.sby

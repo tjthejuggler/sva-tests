@@ -1,0 +1,7 @@
+# running in hello/src/
+read_verilog -formal hello.v
+prep -top hello
+
+hierarchy -smtcheck
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

@@ -1,0 +1,42 @@
+initial
+assume (= [cnt] #b00000000000)
+
+state 0
+assume (= [clk] false)
+assume (= [rst] false)
+
+state 1
+assume (= [clk] false)
+assume (= [rst] false)
+
+state 2
+assume (= [clk] false)
+assume (= [rst] false)
+
+state 3
+assume (= [clk] false)
+assume (= [rst] false)
+
+state 4
+assume (= [clk] false)
+assume (= [rst] false)
+
+state 5
+assume (= [clk] false)
+assume (= [rst] false)
+
+state 6
+assume (= [clk] false)
+assume (= [rst] false)
+
+state 7
+assume (= [clk] false)
+assume (= [rst] false)
+
+state 8
+assume (= [clk] false)
+assume (= [rst] false)
+
+state 9
+assume (= [clk] false)
+assume (= [rst] false)

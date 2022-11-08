@@ -1,0 +1,13 @@
+[options]
+mode prove
+depth 10
+
+[engines]
+smtbmc z3
+
+[script]
+read_verilog -formal hello.v
+prep -top hello
+
+[files]
+hello.v

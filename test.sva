@@ -1,0 +1,4 @@
+#For every posedge of the clock, if the request is true, then the response should be true within 3 cycles.
+
+assert property (@(posedge clk) req |-> ##3 ack);
+
